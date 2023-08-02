@@ -6,7 +6,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div className='app'>
-        <FuncComplex />
+        <FuncComplex min={1} max={10}/>
         <FunctionalComponent min={1} max={10}/>
       </div>
     );
