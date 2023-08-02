@@ -9,8 +9,9 @@ export const FuncComplex = ({min, max}) => {
     result: 'Результат',
   });
 
-  const [randomNumber] =
-  useState(Math.floor(Math.random() * (max - min + 1)) + min);
+  const [randomNumber] = useState(
+    Math.floor(Math.random() * (max - min + 1)) + min
+  );
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,6 +41,9 @@ export const FuncComplex = ({min, max}) => {
   const handleChange = (e) => {
     setState({...state, userNumber: e.target.value});
   };
+
+  console.log('rn:', randomNumber);
+
   return (
     <div className={style.game}>
       <p className={style.result}>{state.result}</p>
